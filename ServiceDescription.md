@@ -1,7 +1,7 @@
 ## Purpose
 A system is required to compare the genotypes determined via whole genome sequencing (and potentially other diagnostic tests in the future) with genotypes determined from alternative genotyping strategies performed by the home GLH. The purpose of this process is to confirm that the sample held at the home GLH and the one that was sequenced and for which results have been produced via the National Bioinformatics Service are from the same person. This does not protect for sample swaps upstream of the home GLH's DNA extraction.
 
-##Requirements
+## Requirements
 The process will:
 
 - Be applied to rare diseases germline samples
@@ -15,7 +15,7 @@ The process will:
 
 ## Proposed solution
 
-###Prerequisites
+### Prerequisites
 
 - GLHs to provide a list of SNPs that will be genotyped.
 - Confirmation that the list of SNPs are informative across a range of ancestries.
