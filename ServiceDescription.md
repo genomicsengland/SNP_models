@@ -45,7 +45,7 @@ We are proposing a two-phased approach:
 - The service will produce routine reports indicating which sequenced samples are awaiting SNP checks
 
 
-### Phase 2 - Users bulk upload VCFs through standard messaging and results are made available in the right documents
+### Phase 2 - Users bulk upload VCFs through standard messaging and results are made available in the right documents (requires LIMS integration)
 - Agreed list of SNPs is directly downloadable from interpretation portal and programmatically. 
 - GLH creates a VCF that can be multi-sample
 - GLH submits genotypes to NGIS via standard messaging
@@ -59,15 +59,28 @@ We are proposing a two-phased approach:
 ### Sample Statuses
 
 PASS: Sample ID matches the Participant ID
+
 PENDING: The test has not been performed
+
 FAIL: The test failed
 
+### API returns
+
+PASS: 200
+
+NO Sequence available:
+
+FAIL:
+
+Didn't manage to respond:
 
 ### Processing rule
 In both phases, the test request will be processed as follows
 
 FAIL: stop don’t dispatch to DSS
+
 PASS: dispatch to DSS 
+
 PENDING: will need to be explicitly forced through
 
 ## Issues / Considerations
