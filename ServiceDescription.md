@@ -56,11 +56,12 @@ We are proposing a two-phased approach:
 - The service will produce routine reports indicating which sequenced samples are awaiting SNP checks
 
 
-### Statuses
+### Sample Statuses
 
 PASS: Sample ID matches the Participant ID
 PENDING: The test has not been performed
 FAIL: The test failed
+
 
 ### Processing rule
 In both phases, the test request will be processed as follows
@@ -69,7 +70,10 @@ FAIL: stop don’t dispatch to DSS
 PASS: dispatch to DSS 
 PENDING: will need to be explicitly forced through
 
-## Issues
+## Issues / Considerations
 - Only home GLH holds the SNP results but the interpreting GLH may be different. Report will be generated to home GLH with outstanding genotypes
-- CIPAPI will need to develop functionality to handle the processing rules
+- CIPAPI will need to develop functionality to handle the processing rules, this is not planned for 1H19
+- Service will need to fetch from storage (or Catalog) or have the genotype files uploaded to it as they come off the workflow
+
+
   
